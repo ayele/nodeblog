@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    //- fonts
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto&display=swap' rel='stylesheet')
+
+  body
+   .container
+    img.logo(src='/images/nodebloglogo.png')
+    nav
+     ul
+      li
+       a(href='/') Home
+      li
+       a(href='/posts/add') Add Post
+      li
+       a(href='/categories/add') Add Category
+    != messages()
+    block content
+    footer
+     p NodeBlog &copy; 2016
